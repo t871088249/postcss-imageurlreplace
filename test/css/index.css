@@ -1,0 +1,21 @@
+.chart_container {
+    width: 100%;
+    background-image: url('../images/chart_bg.png');
+    width: 982px;
+    height: 428px;
+    background-size: contain;
+    overflow: hidden;
+    margin: 0 auto;
+    mask-image: url('../image/chart_bg.png')
+}
+
+@media (max-width: 768px){
+    .chart_container {
+        width: 6.83rem;
+        height: 6.3rem;
+        background-image: url('/images/chart_bg_mob.png');
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+}

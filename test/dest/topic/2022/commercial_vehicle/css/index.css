@@ -1,0 +1,42 @@
+body .chart_container {
+    background-image: url('//p.yunshuren.com/images/chart_bg.png');
+    mask-image: url('//p.yunshuren.com/image/chart_bg.png')
+}
+
+body.up .chart_container {
+    background-image: url('//p.yunshuren.com/images/chart_bg.png');
+    mask-image: url('//p.yunshuren.com/image/chart_bg.png')
+}
+
+body.ali .chart_container {
+    background-image: url('//papu.yunshuren.com/images/chart_bg.png');
+    mask-image: url('//papu.yunshuren.com/image/chart_bg.png')
+}
+
+.chart_container {
+    width: 100%;
+    width: 982px;
+    height: 428px;
+    background-size: contain;
+    overflow: hidden;
+    margin: 0 auto
+}
+
+@media (max-width: 768px){
+    body .chart_container {
+        background-image: url('//p.yunshuren.com/images/chart_bg_mob.png');
+    }
+    body.up .chart_container {
+        background-image: url('//p.yunshuren.com/images/chart_bg_mob.png');
+    }
+    body.ali .chart_container {
+        background-image: url('//papu.yunshuren.com/images/chart_bg_mob.png');
+    }
+    .chart_container {
+        width: 6.83rem;
+        height: 6.3rem;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+}
