@@ -8,6 +8,8 @@ const imageUrlReplace = require('../index');
 const modifyBackground = ()=>{
     src('./code/**/*.css')
     .pipe(postcss([imageUrlReplace({
+        dir: "/topic/topic1/css",
+        domain:"//p1.xxx.com",
         domains: [
             {
                 site: "up",

@@ -1,16 +1,16 @@
 body .chart_container {
-    background-image: url('//p1.yunshuren.com/images/chart_bg.png');
-    mask-image: url('//p1.yunshuren.com/image/chart_bg.png')
+    background-image: url('//p1.xxx.com/topic/topic1/images/chart_bg.png');
+    mask-image: url('//p1.xxx.com/topic/topic1/image/chart_bg.png')
 }
 
 body.up .chart_container {
-    background-image: url('//p1.yunshuren.com/images/chart_bg.png');
-    mask-image: url('//p1.yunshuren.com/image/chart_bg.png')
+    background-image: url('//p1.xxx.com/topic/topic1/images/chart_bg.png');
+    mask-image: url('//p1.xxx.com/topic/topic1/image/chart_bg.png')
 }
 
 body.ali .chart_container {
-    background-image: url('//papu.yunshuren.com/images/chart_bg.png');
-    mask-image: url('//papu.yunshuren.com/image/chart_bg.png')
+    background-image: url('//papu.xxx.com/topic/topic1/images/chart_bg.png');
+    mask-image: url('//papu.xxx.com/topic/topic1/image/chart_bg.png')
 }
 
 .chart_container {
@@ -24,13 +24,13 @@ body.ali .chart_container {
 
 @media (max-width: 768px){
     body .chart_container {
-        background-image: url('//p1.yunshuren.com/images/chart_bg_mob.png');
+        background-image: url('//p1.xxx.com/images/chart_bg_mob.png');
     }
     body.up .chart_container {
-        background-image: url('//p1.yunshuren.com/images/chart_bg_mob.png');
+        background-image: url('//p1.xxx.com/images/chart_bg_mob.png');
     }
     body.ali .chart_container {
-        background-image: url('//papu.yunshuren.com/images/chart_bg_mob.png');
+        background-image: url('//papu.xxx.com/images/chart_bg_mob.png');
     }
     .chart_container {
         width: 6.83rem;
@@ -39,4 +39,7 @@ body.ali .chart_container {
         background-size: 100%;
     }
 
+    .a {
+        width: 50px;
+    }
 }
