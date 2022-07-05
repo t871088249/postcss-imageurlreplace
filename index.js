@@ -1,20 +1,19 @@
 const postcss = require('postcss');
 const path = require('path');
 
-const replaceProps = ["backgroudn", 'mask-image']
 
-const config = {
-    domains: [
-        {
-            site: "up",
-            host: "//p.yunshuren.com"
-        },
-        {
-            site: "ali",
-            host: "//papu.yunshuren.com"
-        },
-    ]
-}
+// const config = {
+//     domains: [
+//         {
+//             site: "up",
+//             host: "//p.yunshuren.com"
+//         },
+//         {
+//             site: "ali",
+//             host: "//papu.yunshuren.com"
+//         },
+//     ]
+// }
 
 
 function makeRootUrl(url, relativePath){
@@ -25,13 +24,16 @@ function makeRootUrl(url, relativePath){
     }
 }
 
-module.exports = postcss.plugin('bgChecker', function (opts) {
-    opts = opts || {};
+module.exports = postcss.plugin('imageUrlReplace', function (opts) {
+    opts = opts || {domains: []};
     // 传入配置相关的代码
     return function (root, result) {
         // 转化CSS 的功能代码
 
         // console.log(root, result.opts.from)
+        if(opts.domains.length == 0 ){
+            return
+        }
 
         let relativePath =  path.dirname(path.relative(path.join(__dirname , 'code/'), result.opts.from));
 
@@ -49,7 +51,7 @@ module.exports = postcss.plugin('bgChecker', function (opts) {
                     })
                 }
             })
-            createPubBackground(rule)
+            createPubBackground(rule , opts)
             rule.walkDecls(/^background|mask-image/, decl=>{
                 let value = decl.value;
                 if(value.indexOf('url') != -1){
@@ -85,7 +87,7 @@ function createDomainImg(rule, domain){
         })
 }
 
-function createPubBackground(rule){
+function createPubBackground(rule , config){
     var defaultDomain = {
         site: '',
         host: config.domains[0].host
